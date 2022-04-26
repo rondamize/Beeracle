@@ -1,0 +1,10 @@
+.frame {
+    width: 130px;
+    height: auto;
+}
+
+.square {
+    width: 130px;
+    height: 130px;
+    border-bottom: 1px solid #fff;
+}

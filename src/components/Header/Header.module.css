@@ -1,0 +1,41 @@
+@import url("../../fonts/Mont-SemiBold/style.css");
+
+.header {
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 2fr 4fr 1fr 1fr 1fr 1fr;*/
+    height: 130px;
+    border-bottom: 1px solid #fff;
+    display: flex;
+}
+
+.logo {
+    width: 278px;
+    border-right: 1px solid #fff;
+    font-size: 36px;
+    display: flex;
+}
+
+.logo h1{
+    font-size: 36px;
+    font-family: Mont;
+    margin: auto;
+}
+
+.space {
+    width: 510px;
+    border-right: 1px solid #fff;
+}
+
+.iconSpace {
+    width: 130px;
+    border-right: 1px solid #fff;
+    display: flex;
+}
+
+.iconSpace img{
+    margin: auto;
+}
+
+.iconSpace:last-child {
+    border-right: none;
+}

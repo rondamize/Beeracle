@@ -1,11 +1,20 @@
-
-import './App.css';
+import './reset.css';
+import classes from './App.module.css';
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import HomePage from "./components/HomePage/HomePage";
+import Frame from "./components/Frame/Frame";
 
 function App() {
   return (
-    <div className="App">
-        <h1>Beeracle</h1>
-        <h4>A new generation app for exploring and assessing beer.</h4>
+    <div className={classes.app}>
+        <Frame />
+        <div className={classes.content}>
+            <Header />
+            <HomePage />
+            <Footer />
+        </div>
+        <Frame />
     </div>
   );
 }

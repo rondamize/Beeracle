@@ -1,0 +1,9 @@
+.app {
+  display: grid;
+  grid-template-columns: 130px auto 130px;
+}
+
+.content {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
