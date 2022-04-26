@@ -1,0 +1,21 @@
+.content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    position: relative;
+}
+
+.searchName {
+    font-family: 'Mont';
+    font-weight: 700;
+    font-size: 30px;
+    position: absolute;
+    margin-left: 6%;
+    top: 70%;
+    background: transparent;
+}
+
+.abstractLine {
+    position: absolute;
+    margin-left: 4%;
+    top: 65%;
+}

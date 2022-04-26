@@ -1,0 +1,6 @@
+.content {
+    display: grid;
+    grid-template-columns: 0.925fr 3fr;
+    height: 180px;
+    border-bottom: 1px solid #ffffff;
+}

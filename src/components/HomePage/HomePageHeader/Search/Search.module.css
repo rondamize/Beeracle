@@ -1,0 +1,30 @@
+.searchArea {
+    margin-top: 112px;
+    height: 90px;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    width: inherit;
+    /*position: absolute;*/
+    /*left: 20px;*/
+    /*top: 20px;*/
+    padding: 0 4%;
+    display: flex;
+    align-items: center;
+
+}
+
+.searchArea input {
+    padding: 0;
+    border: none;
+    height: inherit;
+    width: 100%;
+    background: transparent;
+    color: #ffffff;
+    opacity: 0.7;
+
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+}
