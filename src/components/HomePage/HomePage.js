@@ -8,8 +8,8 @@ const HomePage = (props) => {
        <div>
           <HomePageHeader />
           <div className={classes.content}>
-             <FiltersBlock />
-             <SearchResults />
+              <FiltersBlock />
+              <SearchResults />
           </div>
        </div>
    );

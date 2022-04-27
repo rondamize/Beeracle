@@ -1,0 +1,33 @@
+.content {
+    height: 255px;
+}
+
+.showMore {
+    height: 155px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.showMore p {
+    text-transform: uppercase;
+    text-decoration-line: underline;
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+    height: fit-content;
+}
+
+.imgContainer {
+    width: 100px;
+    height: 100px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
