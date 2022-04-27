@@ -1,0 +1,45 @@
+.content {
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    height: 300px;
+}
+
+.content:nth-child(3n+0) {
+    border-right: none;
+}
+
+.topPannel {
+    display: flex;
+    justify-content: space-between;
+    margin: 8% 5%;
+}
+
+.rateNumber {
+    margin-right: 10px;
+}
+
+.photo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.bottomPannel {
+    display: flex;
+    justify-content: space-between;
+    margin: 8% 5%;
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+}
+
+.abv {
+    opacity: 0.8;
+}

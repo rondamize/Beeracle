@@ -1,5 +1,5 @@
 import classes from './WideBlock.module.css'
-import SearchNameBlock from "../../SearchNameBlock/SearchNameBlock";
+import SearchNameBlock from "../../../decorations/SearchNameBlock/SearchNameBlock";
 
 const WideBlock = (props) => {
     return(
