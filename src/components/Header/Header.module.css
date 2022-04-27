@@ -1,12 +1,17 @@
 @import url("../../fonts/Mont-SemiBold/style.css");
 
 .header {
-    /*display: grid;*/
-    /*grid-template-columns: 1fr 2fr 4fr 1fr 1fr 1fr 1fr;*/
     height: 130px;
     border-bottom: 1px solid #fff;
     display: flex;
 }
+
+.footer {
+    height: 130px;
+    border-top: 1px solid #fff;
+    display: flex;
+}
+
 
 .logo {
     width: 278px;

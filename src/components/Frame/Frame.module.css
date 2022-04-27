@@ -1,10 +1,19 @@
 .frame {
     width: 130px;
     height: auto;
+    display: grid;
+    grid-template-rows: 131px auto 131px;
 }
 
-.square {
+.squareTop {
     width: 130px;
     height: 130px;
     border-bottom: 1px solid #fff;
+}
+
+.squareBottom {
+    width: 130px;
+    height: 130px;
+    border-top: 1px solid #fff;
+    /*margin-bottom: 0;*/
 }
