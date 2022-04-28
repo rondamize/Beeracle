@@ -15,6 +15,11 @@
     justify-content: space-between;
 }
 
+/*.input {*/
+/*    width: 21px;*/
+/*    height: 21px;*/
+/*}*/
+
 .name {
     text-transform: uppercase;
     font-family: 'Mont';
@@ -27,6 +32,9 @@
     position: absolute;
     z-index: -1;
     opacity: 0;
+    margin: 0;
+    width: 21px;
+    height: 21px;
 }
 
 .customCheckbox+label {
@@ -37,15 +45,15 @@
 .customCheckbox+label::before {
     content: '';
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 20px;
+    height: 20px;
     flex-shrink: 0;
     flex-grow: 0;
     border: 1px solid #ffffff;
     margin-right: 0.5em;
     background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 50% 50%;
+    background-position: 50% 100%;
+    background-size: 90% 80%;
     opacity: 0.8;
 }
 
