@@ -1,4 +1,4 @@
 .content {
     display: grid;
-    grid-template-columns: 0.925fr 3fr;
+    grid-template-columns: 278px auto;
 }
