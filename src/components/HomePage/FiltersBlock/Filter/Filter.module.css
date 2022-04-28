@@ -1,0 +1,22 @@
+.content {
+
+}
+
+.filterName {
+    width: 180px;
+    height: 54px;
+    border: 1px solid #7B61FF;
+    display: flex;
+    margin-top: 35px;
+    margin-left: 22px;
+}
+
+.filterName p {
+    text-transform: uppercase;
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    margin: auto;
+    line-height: 23px;
+}

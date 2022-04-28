@@ -1,0 +1,55 @@
+
+.content {
+    height: 51px;
+    width: 293px;
+    border-top: 1px solid #ffffff;
+}
+
+.content:last-child {
+    border-bottom: 1px solid #ffffff;
+}
+
+.section {
+    display: flex;
+    margin: 5%;
+    justify-content: space-between;
+}
+
+.name {
+    text-transform: uppercase;
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+}
+.customCheckbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.customCheckbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+.customCheckbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #ffffff;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    opacity: 0.8;
+}
+
+.customCheckbox:checked+label::before {
+    opacity: 1;
+    background-image: url("../../../../../../assets/images/checkboxTick.svg");
+}
