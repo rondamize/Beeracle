@@ -5,14 +5,15 @@ import goldenBadge from '../../assets/images/goldenBadge.svg'
 import Logo from "./Blocks/Logo";
 import IconSpace from "./Blocks/IconSpace";
 
+
 const Header = (props) => {
     return(
         <div className={classes.header}>
             <Logo />
             <div className={classes.space}></div>
-            <IconSpace url={star}/>
-            <IconSpace url={heart}/>
-            <IconSpace url={goldenBadge}/>
+            <IconSpace url={star} path={'/top'}/>
+            <IconSpace url={heart} path={'/favourites'}/>
+            <IconSpace url={goldenBadge} path={'/profile'}/>
         </div>
     );
 }

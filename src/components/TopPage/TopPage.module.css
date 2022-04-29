@@ -1,0 +1,11 @@
+.content {
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*flex-direction: column;*/
+}
+
+
+.topHeader {
+    height: 185px;
+    border-bottom: 1px solid #ffffff;
+}

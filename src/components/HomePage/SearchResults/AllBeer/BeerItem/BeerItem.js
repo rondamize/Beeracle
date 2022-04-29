@@ -3,10 +3,12 @@ import heart from "../../../../../assets/images/heart.svg"
 import rateStar from "../../../../../assets/images/rateStar.svg"
 import cIsForCookie from "../../../../../assets/images/beer/cIsForCookie.svg"
 import arrow from "../../../../../assets/images/arrow.svg"
+import classNames from 'classnames'
 
 const BeerItem = (props) => {
+    // debugger;
     return(
-        <div className={classes.content}>
+        <div className={props.forTop ? classes.forTop : classes.content}>
             <div className={classes.topPannel}>
                 <div className={classes.rating}>
                     <p className={classes.rateNumber}>4.5</p>

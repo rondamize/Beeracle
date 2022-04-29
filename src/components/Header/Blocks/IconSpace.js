@@ -1,10 +1,11 @@
 import classes from '../Header.module.css'
+import {NavLink} from "react-router-dom";
 
 
 const IconSpace = (props) => {
     return(
             <div className={classes.iconSpace}>
-                <img src={props.url} />
+                <NavLink to={props.path}><img src={props.url} /></NavLink>
             </div>
     );
 }

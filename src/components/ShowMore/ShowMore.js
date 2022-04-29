@@ -7,9 +7,15 @@ const ShowMore = (props) => {
            <div className={classes.showMore}>
                <p>ПОКАЗАТЬ ЕЩЕ</p>
            </div>
-           <div className={classes.imgContainer}>
-               <img src={upArrow}/>
+           <div className={classes.grid}>
+               <div></div>
+               <div className={classes.imgContainer}>
+                   <img src={upArrow}/>
+               </div>
            </div>
+           {/*<div className={classes.imgContainer}>*/}
+           {/*    <img src={upArrow}/>*/}
+           {/*</div>*/}
        </div>
    );
 }

@@ -1,9 +1,12 @@
 import classes from '../Header.module.css'
+import {NavLink} from "react-router-dom";
 
 const Logo = (props) => {
     return(
         <div className={classes.logo}>
-            <h1>Beeracle</h1>
+            <NavLink to='/home'>
+                <h1>Beeracle</h1>
+            </NavLink>
         </div>
     );
 }

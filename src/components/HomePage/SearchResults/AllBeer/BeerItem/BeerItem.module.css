@@ -1,12 +1,18 @@
-.content {
-    border-right: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
+.content, .forTop {
+    background-color: black;
+    /*border-right: 1px solid #ffffff;*/
+    /*border-bottom: 1px solid #ffffff;*/
     height: 300px;
 }
 
 .content:nth-child(3n+0) {
     border-right: none;
 }
+
+.forTop:nth-child(4n+0) {
+    border-right: none;
+}
+
 
 .topPannel {
     display: flex;
