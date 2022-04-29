@@ -8,4 +8,22 @@
 .topHeader {
     height: 185px;
     border-bottom: 1px solid #ffffff;
+    position: relative;
+}
+
+.searchName {
+    font-family: 'Mont';
+    font-weight: 700;
+    font-size: 30px;
+    position: absolute;
+    margin-left: 6%;
+    top: 70%;
+    background: transparent;
+    text-transform: uppercase;
+}
+
+.abstractLine {
+    position: absolute;
+    margin-left: 4%;
+    top: 65%;
 }
