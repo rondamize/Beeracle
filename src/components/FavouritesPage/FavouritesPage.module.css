@@ -1,0 +1,47 @@
+.content {
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*flex-direction: column;*/
+}
+
+
+.topHeader {
+    height: 185px;
+    border-bottom: 1px solid #ffffff;
+    position: relative;
+}
+
+.searchName {
+    font-family: 'Mont';
+    font-weight: 700;
+    font-size: 30px;
+    position: absolute;
+    margin-left: 10%;
+    top: 72%;
+    background: transparent;
+    text-transform: uppercase;
+}
+
+.abstractLine {
+    position: absolute;
+    margin-left: 4%;
+    top: 65%;
+}
+
+.imgContainer {
+    width: 100px;
+    height: 99px;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    /*float: right;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.grid {
+    padding-top: 110px;
+    display: grid;
+    grid-template-columns: auto 101px;
+    border-top: 1px solid #ffffff;
+}
