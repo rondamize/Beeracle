@@ -11,7 +11,7 @@ const TopPage = (props) => {
                 <img className={classes.abstractLine} src={abstractLine}/>
                 <div className={classes.searchName}>Топ недели</div>
             </div>
-            <Top />
+            <Top beerTop={props.beerTop}/>
             <ShowMore />
        </div>
    );

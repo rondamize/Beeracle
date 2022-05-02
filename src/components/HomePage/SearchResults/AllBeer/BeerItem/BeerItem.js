@@ -11,18 +11,18 @@ const BeerItem = (props) => {
         <div className={props.forTop ? classes.forTop : classes.content}>
             <div className={classes.topPannel}>
                 <div className={classes.rating}>
-                    <p className={classes.rateNumber}>4.5</p>
+                    <p className={classes.rateNumber}>{props.rating}</p>
                     <img src={rateStar}/>
                 </div>
                 <img src={heart}/>
             </div>
             <div className={classes.photo}>
-                <img src={cIsForCookie} />
+                <img src={props.picture} />
             </div>
             <div className={classes.bottomPannel}>
                 <div className={classes.beerData}>
-                    <p className={classes.name}>C IS FOR COOKIE</p>
-                    <p className={classes.abv}>8.5% ABV</p>
+                    <p className={classes.name}>{props.name}</p>
+                    <p className={classes.abv}>{props.abv}</p>
                 </div>
                 <img src={arrow}/>
             </div>

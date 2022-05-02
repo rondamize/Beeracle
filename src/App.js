@@ -7,6 +7,7 @@ import Frame from "./components/Frame/Frame";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import TopPage from "./components/TopPage/TopPage";
 import FavouritesPage from "./components/FavouritesPage/FavouritesPage";
+import TopPageContainer from "./components/TopPage/TopPageContainer";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
                   {/*<HomePage />*/}
                   <Routes>
                       <Route path="/home" element={<HomePage />} />
-                      <Route path="/top" element={<TopPage />} />
+                      <Route path="/top" element={<TopPageContainer />} />
                       <Route path="/favourites" element={<FavouritesPage />} />
                   </Routes>
                   <Footer />
