@@ -1,12 +1,12 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import topPageReducer from "./topPageReducer";
+import headerReducer from "./HeaderReducer";
 // import thunkMiddleware from "redux-thunk";
 
 
 let reducers = combineReducers({
-    // homePageReducer: homePageReducer,
     topPage: topPageReducer,
-    // favouritesPageReducer: favouritesPageReducer
+    header: headerReducer
 });
 
 // let store = createStore(reducers, applyMiddleware(thunkMiddleware));

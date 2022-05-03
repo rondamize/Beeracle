@@ -5,9 +5,9 @@ import Footer from "./components/Footer/Footer";
 import HomePage from "./components/HomePage/HomePage";
 import Frame from "./components/Frame/Frame";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import TopPage from "./components/TopPage/TopPage";
-import FavouritesPage from "./components/FavouritesPage/FavouritesPage";
 import TopPageContainer from "./components/TopPage/TopPageContainer";
+import HeaderContainer from "./components/Header/HeaderContainer";
+import FavouritesPageContainer from "./components/FavouritesPage/FavouritesPageContainer";
 
 function App() {
   return (
@@ -15,12 +15,12 @@ function App() {
           <div className={classes.app}>
               <Frame />
               <div className={classes.content}>
-                  <Header />
+                  <HeaderContainer />
                   {/*<HomePage />*/}
                   <Routes>
                       <Route path="/home" element={<HomePage />} />
                       <Route path="/top" element={<TopPageContainer />} />
-                      <Route path="/favourites" element={<FavouritesPage />} />
+                      <Route path="/favourites" element={<FavouritesPageContainer />} />
                   </Routes>
                   <Footer />
               </div>

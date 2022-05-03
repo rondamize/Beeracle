@@ -41,8 +41,18 @@
     display: flex;
 }
 
+.activeIconSpace {
+    background-color: #7B61FF;
+}
+
 .iconSpace a{
     margin: auto;
+    background-color: inherit;
+}
+
+.iconSpace a img{
+    background-color: inherit;
+    fill: white;
 }
 
 .iconSpace:last-child {

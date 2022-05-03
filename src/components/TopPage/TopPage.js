@@ -1,5 +1,4 @@
 import classes from "./TopPage.module.css";
-import SearchNameBlock from "../decorations/SearchNameBlock/SearchNameBlock";
 import Top from "./Top/Top";
 import ShowMore from "../ShowMore/ShowMore";
 import abstractLine from "../../assets/images/abstractLine.svg";
