@@ -11,8 +11,8 @@ const FavouritesPage = (props) => {
                 <img className={classes.abstractLine} src={abstractLine}/>
                 <div className={classes.searchName}>Избранное</div>
             </div>
-            <Favourites />
-            {/*<ShowMore />*/}
+            <Favourites favourites={props.favourites}/>
+
             <div className={classes.grid}>
                <div></div>
                <div className={classes.imgContainer}>

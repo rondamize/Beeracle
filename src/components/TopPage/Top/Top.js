@@ -6,14 +6,6 @@ const Top = (props) => {
                                                 name={b.name} abv={b.abv} rating={b.rating}/>);
    return(
        <div className={classes.content}>
-           {/*<BeerItem forTop={true}/>*/}
-           {/*<BeerItem forTop={true}/>*/}
-           {/*<BeerItem forTop={true}/>*/}
-           {/*<BeerItem forTop={true}/>*/}
-           {/*<BeerItem forTop={true}/>*/}
-           {/*<BeerItem forTop={true}/>*/}
-           {/*<BeerItem forTop={true}/>*/}
-           {/*<BeerItem forTop={true}/>*/}
            {beerElements}
        </div>
    );

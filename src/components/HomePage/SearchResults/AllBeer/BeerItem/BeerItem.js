@@ -1,9 +1,8 @@
 import classes from './BeerItem.module.css'
 import heart from "../../../../../assets/images/heart.svg"
+import heartIsFavourite from "../../../../../assets/images/heartIsFavourite.svg"
 import rateStar from "../../../../../assets/images/rateStar.svg"
-import cIsForCookie from "../../../../../assets/images/beer/cIsForCookie.svg"
 import arrow from "../../../../../assets/images/arrow.svg"
-import classNames from 'classnames'
 
 const BeerItem = (props) => {
     // debugger;
@@ -14,7 +13,7 @@ const BeerItem = (props) => {
                     <p className={classes.rateNumber}>{props.rating}</p>
                     <img src={rateStar}/>
                 </div>
-                <img src={heart}/>
+                <img src={props.isFavourite ? heartIsFavourite : heart}/>
             </div>
             <div className={classes.photo}>
                 <img src={props.picture} />
