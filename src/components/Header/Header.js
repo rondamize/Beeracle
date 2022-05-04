@@ -6,6 +6,7 @@ import heartActive from '../../assets/images/heartActive.svg'
 import goldenBadge from '../../assets/images/goldenBadge.svg'
 import Logo from "./Blocks/Logo";
 import IconSpace from "./Blocks/IconSpace";
+import {NavLink} from "react-router-dom";
 
 
 const Header = (props) => {
@@ -16,9 +17,11 @@ const Header = (props) => {
         <div className={classes.header}>
             <Logo />
             <div className={classes.space}></div>
-            <IconSpace url={star} urlActive={starActive} path={'/top'} active={props.location === '/top'}/>
-            <IconSpace url={heart} urlActive={heartActive} path={'/favourites'} active={props.location === '/favourites'}/>
-            <IconSpace url={goldenBadge} path={'/profile'}/>
+            <div className={classes.iconsBlock}>
+                <NavLink to='/top'><IconSpace url={star} urlActive={starActive} path={'/top'} active={props.location === '/top'}/></NavLink>
+                <NavLink to='/favourites'><IconSpace url={heart} urlActive={heartActive} path={'/favourites'} active={props.location === '/favourites'}/></NavLink>
+                <NavLink to='/profile'><IconSpace url={goldenBadge} path={'/profile'}/></NavLink>
+            </div>
         </div>
     );
 }

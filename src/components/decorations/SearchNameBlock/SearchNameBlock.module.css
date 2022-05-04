@@ -14,6 +14,7 @@
     top: 72%;
     background: transparent;
     text-transform: uppercase;
+    width: max-content;
 }
 
 .abstractLine {

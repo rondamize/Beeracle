@@ -30,6 +30,12 @@
     width: 284px;
 }
 
+.photo a {
+    display: flex;
+    margin: 0;
+    text-decoration: none;
+}
+
 .rating {
     display: flex;
     align-items: center;
@@ -49,4 +55,17 @@
 
 .abv {
     opacity: 0.8;
+}
+
+.beerData a {
+    text-decoration-line: none;
+}
+
+.beerData a:hover {
+    text-decoration-line: underline;
+    color: #7B61FF;
+}
+
+.beerData a:hover p{
+    color: #7B61FF;
 }

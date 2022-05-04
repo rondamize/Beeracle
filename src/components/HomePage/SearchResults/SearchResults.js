@@ -1,12 +1,12 @@
 import classes from './SearchResults.module.css'
 import CategoriesSeparator from "../../decorations/CategoriesSeparator/CategoriesSeparator";
-import AllBeer from "./AllBeer/AllBeer";
 import ShowMore from "../../ShowMore/ShowMore";
+import AllBeerContainer from "./AllBeer/AllBeerContainer";
 const SearchResults = (props) => {
     return(
         <div className={classes.content}>
             <CategoriesSeparator />
-            <AllBeer />
+            <AllBeerContainer />
             <ShowMore />
         </div>
     );

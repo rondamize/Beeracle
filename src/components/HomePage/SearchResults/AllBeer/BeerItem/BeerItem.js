@@ -3,6 +3,7 @@ import heart from "../../../../../assets/images/heart.svg"
 import heartIsFavourite from "../../../../../assets/images/heartIsFavourite.svg"
 import rateStar from "../../../../../assets/images/rateStar.svg"
 import arrow from "../../../../../assets/images/arrow.svg"
+import {NavLink} from "react-router-dom";
 
 const BeerItem = (props) => {
     // debugger;
@@ -16,11 +17,11 @@ const BeerItem = (props) => {
                 <img src={props.isFavourite ? heartIsFavourite : heart}/>
             </div>
             <div className={classes.photo}>
-                <img src={props.picture} />
+                <NavLink to='/beer'><img src={props.picture} /></NavLink>
             </div>
             <div className={classes.bottomPannel}>
                 <div className={classes.beerData}>
-                    <p className={classes.name}>{props.name}</p>
+                    <NavLink to='/beer'><p className={classes.name}>{props.name}</p></NavLink>
                     <p className={classes.abv}>{props.abv}</p>
                 </div>
                 <img src={arrow}/>

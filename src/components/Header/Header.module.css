@@ -6,6 +6,10 @@
     display: flex;
 }
 
+.header a {
+    display: flex;
+}
+
 .footer {
     height: 130px;
     border-top: 1px solid #fff;
@@ -33,6 +37,11 @@
 .space {
     width: 510px;
     border-right: 1px solid #fff;
+}
+
+.iconsBlock {
+    display: flex;
+    float: right;
 }
 
 .iconSpace {

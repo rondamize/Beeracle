@@ -1,27 +1,26 @@
 import React from "react";
-import TopPage from "./TopPage";
+import AllBeer from "./AllBeer";
 import {connect} from "react-redux";
 import {compose} from "redux";
-import {withRouter} from "../../hoc/withRouter";
-import {changeLocationActionCreator} from "../../redux/HeaderReducer";
+import {withRouter} from "../../../../hoc/withRouter";
+import {changeLocationActionCreator} from "../../../../redux/HeaderReducer";
 
 
 class AllBeerContainer extends React.Component {
 
     componentDidMount() {
         this.props.changeLocationActionCreator(this.props.router.location.pathname);
-        // debugger;
     }
 
     render() {
         return (
-            <TopPage {...this.props}/>
+            <AllBeer {...this.props}/>
         )
     }
 }
 
 let mapStateToProps = (state) => ({
-    beerTop: state.topPage.beerTop,
+    allBeer: state.allBeer.allBeer,
 })
 
 export default compose(
