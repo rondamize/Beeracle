@@ -7,6 +7,7 @@ import cIsForCookieBig from "../../assets/images/beer/cIsForCookieBig.svg"
 import cIsForCookieSprite from "../../assets/images/beer/cIsForCookieSprite.svg"
 import Comment from "./Comment/Comment";
 import BeerDataItem from "./BeerDataItem/BeerDataItem";
+import ShowMore from "../ShowMore/ShowMore";
 
 
 const BeerCard = (props) => {
@@ -82,6 +83,7 @@ const BeerCard = (props) => {
                 <Comment />
                 <Comment />
             </div>
+            <ShowMore />
         </div>
     );
 

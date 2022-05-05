@@ -19,7 +19,7 @@ const Comment = (props) => {
                     </div>
                 </div>
                 <div className={classes.commentBody}>
-                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    <p className={classes.commentText}>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                     <div className={classes.likesSection}>
                         <div className={classes.likes}>
                             <img src={like} />

@@ -17,16 +17,7 @@
 .commentHeader {
     height: 62px;
     border-bottom: 1px solid #ffffff;
-}
-
-.commentBody {
-    min-height: 134px;
-    font-family: 'Mont';
-    font-style: normal;
-    font-size: 20px;
-    display: grid;
-    grid-template-rows: auto 20px;
-    /*line-height: 150%;*/
+    display: flex;
 }
 
 .username {
@@ -36,15 +27,55 @@
     font-size: 20px;
     line-height: 26px;
     text-transform: uppercase;
+    margin: auto 24px;
+}
+
+.rating {
+    margin: auto 64px;
+}
+
+.rateStar {
+    margin-right: 20px;
+}
+
+.commentBody {
+    min-height: 154px;
+    font-family: 'Mont';
+    font-style: normal;
+    font-size: 20px;
+    display: grid;
+    grid-template-rows: auto 40px;
+    /*line-height: 150%;*/
+}
+
+.commentText {
+    margin: 30px 24px;
 }
 
 .likesSection {
     height: 20px;
     display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
 }
 
 .likes {
     display: flex;
+}
+
+.likes img, .dislikes img {
+    margin-right: 8px;
+}
+
+.likes p, .dislikes p {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    opacity: 0.6;
+    margin-right: 20px;
 }
 
 .dislikes {
