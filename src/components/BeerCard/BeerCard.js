@@ -6,6 +6,7 @@ import abstractLineBeerPage from "../../assets/images/abstractLineBeerPage.svg"
 import cIsForCookieBig from "../../assets/images/beer/cIsForCookieBig.svg"
 import cIsForCookieSprite from "../../assets/images/beer/cIsForCookieSprite.svg"
 import Comment from "./Comment/Comment";
+import BeerDataItem from "./BeerDataItem/BeerDataItem";
 
 
 const BeerCard = (props) => {
@@ -34,24 +35,38 @@ const BeerCard = (props) => {
                         </div>
                     </div>
                 </div>
-                <div></div>
+                <div className={classes.dataList}>
+                    <BeerDataItem keyP="Стиль" value="Imperial / Double"/>
+                    <BeerDataItem keyP="Категория" value="Stout"/>
+                    <BeerDataItem keyP="Хмель" value="n/a"/>
+                    <BeerDataItem keyP="Пивоварня" value="4BREWERS"/>
+                    <BeerDataItem keyP="Страна" value="россия"/>
+                    <BeerDataItem keyP="ABV" value="8.5%"/>
+                </div>
             </div>
 
             <div className={classes.description}>
                 <p>Плотный, насыщенный крепкий тёмный эль. Сладкий, со вкусом и ароматом шоколада и печенья.</p>
             </div>
+
             <div className={classes.reviewHeader}>
-                <p>Отзывы</p>
+                <div className={classes.reviewHeaderBackground}>
+                    <p>Отзывы</p>
+                </div>
             </div>
+
             <div className={classes.writeReview}>
                 <p>Написать отзыв</p>
             </div>
+
             <div className={classes.rateStars}>
-                <img className={classes.rateStar} src={rateStar} />
-                <img className={classes.rateStar} src={rateStar} />
-                <img className={classes.rateStar} src={rateStar} />
-                <img className={classes.rateStar} src={rateStar} />
-                <img className={classes.rateStar} src={rateStar} />
+                <div className={classes.rateStarsContainer}>
+                    <img className={classes.rateStar} src={rateStar} />
+                    <img className={classes.rateStar} src={rateStar} />
+                    <img className={classes.rateStar} src={rateStar} />
+                    <img className={classes.rateStar} src={rateStar} />
+                    <img className={classes.rateStar} src={rateStar} />
+                </div>
             </div>
             <div className={classes.reviewInputBlock}>
                 <input className={classes.reviewInput} value="НАЧНИТЕ ВВОДИТЬ ТЕКСТ..."/>

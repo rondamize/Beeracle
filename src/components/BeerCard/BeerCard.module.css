@@ -60,6 +60,7 @@
     height: 575px;
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #ffffff;
+    display: flex;
 }
 
 .beerPhotoBlock img {
@@ -108,9 +109,20 @@
     display: flex;
 }
 
+.dataList {
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    width: 50%;
+}
+
 .description {
     height: 208px;
     border-bottom: 1px solid #ffffff;
+    display: flex;
+}
+
+.description p {
+    margin: auto 40px;
 }
 
 .reviewHeader {
@@ -122,6 +134,25 @@
     font-size: 30px;
     line-height: 38px;
     text-transform: uppercase;
+    display: flex;
+    position: relative;
+}
+
+.reviewHeaderBackground {
+    width: 180px;
+    height: 79px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../../assets/images/abstractLineBeerPage.svg");
+    display: flex;
+    bottom: 0;
+    left: 18px;
+    position: absolute;
+}
+
+.reviewHeaderBackground p {
+    background: transparent;
+    margin: 2% auto;
 }
 
 .writeReview {
@@ -133,16 +164,29 @@
     font-size: 24px;
     line-height: 31px;
     text-transform: uppercase;
+    display: flex;
+}
+
+.writeReview p {
+    height: fit-content;
+    margin-top: 80px;
+    margin-left: 40px;
 }
 
 .rateStars {
     height: 62px;
     border-bottom: 1px solid #ffffff;
+    display: flex;
+}
+
+.rateStarsContainer {
+    margin: auto 40px;
 }
 
 .rateStar {
     opacity: 0.5;
     width: 25px;
+    margin-right: 20px;
 }
 
 .rateStar:hover {
@@ -150,12 +194,13 @@
 }
 
 .reviewInputBlock {
-    height: 134px;
+    height: 163px;
     border-bottom: 1px solid #ffffff;
 }
 
 .reviewInput {
     height: 85px;
+    margin: 0 20px;
     background: transparent;
     border: none;
     color: #ffffff;
@@ -168,6 +213,11 @@
     line-height: 150%;
 }
 
+.reviewInputBlock img {
+    float: right;
+    margin: 16px;
+}
+
 .commentsSection {
-    margin-top: 112px;
+    margin-top: 96px;
 }

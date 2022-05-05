@@ -1,0 +1,33 @@
+.content {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #ffffff;
+}
+
+.content:last-child {
+    border-bottom: none;
+}
+
+.key {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    margin: auto 0;
+    margin-left: 24px;
+}
+
+.value {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    opacity: 0.85;
+    text-transform: uppercase;
+    margin: auto 0;
+    margin-left: 44px;
+}
