@@ -14,15 +14,17 @@ const BeerItem = (props) => {
                     <p className={classes.rateNumber}>{props.rating}</p>
                     <img src={rateStar}/>
                 </div>
-                <img src={props.isFavourite ? heartIsFavourite : heart}/>
+                {/*<img src={props.isFavourite ? heartIsFavourite : heart}/>*/}
+                {/*TODO: Change icon depending on authorised user*/}
+                <img src={heart}/>
             </div>
             <div className={classes.photo}>
-                <NavLink to='/beer'><img src={props.picture} /></NavLink>
+                <NavLink to='/beer'><img src={`http://localhost:3001${props.picture}`} /></NavLink>
             </div>
             <div className={classes.bottomPannel}>
                 <div className={classes.beerData}>
                     <NavLink to='/beer'><p className={classes.name}>{props.name}</p></NavLink>
-                    <p className={classes.abv}>{props.abv}</p>
+                    <p className={classes.abv}>{props.abv} ABV</p>
                 </div>
                 <img src={arrow}/>
             </div>

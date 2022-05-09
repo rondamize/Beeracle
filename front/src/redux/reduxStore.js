@@ -3,7 +3,7 @@ import topPageReducer from "./topPageReducer";
 import headerReducer from "./HeaderReducer";
 import favouritesPageReducer from "./favouritesPageReducer";
 import allBeerReducer from "./allBeerReducer";
-// import thunkMiddleware from "redux-thunk";
+import thunkMiddleware from "redux-thunk";
 
 
 let reducers = combineReducers({
@@ -13,8 +13,7 @@ let reducers = combineReducers({
     allBeer: allBeerReducer
 });
 
-// let store = createStore(reducers, applyMiddleware(thunkMiddleware));
-let store = createStore(reducers);
+let store = createStore(reducers, applyMiddleware(thunkMiddleware));
 
 window.store = store;
 export default store;
