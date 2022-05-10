@@ -19,11 +19,11 @@ const corsOptions = {
 app.use(cors(corsOptions))
 
 //Import routes
-// const postsRoute = require('./routes/posts');
-// app.use('/posts', postsRoute);
-
 const homeRoute = require('./routes/home');
 app.use('/home', homeRoute);
+
+const beerRoute = require('./routes/beer');
+app.use('/beer', beerRoute);
 
 //ROUTES
 app.get('/', (req, res) => {

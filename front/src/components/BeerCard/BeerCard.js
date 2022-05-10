@@ -16,17 +16,17 @@ const BeerCard = (props) => {
             <div className={classes.nameRatingPannel}>
                 <div className={classes.nameSection}>
                     <img className={classes.abstractLine} src={abstractLineBeerPage} />
-                    <div className={classes.name}>C Is For Cookie</div>
+                    <div className={classes.name}>{props.currentBeer.name}</div>
                 </div>
                 <div className={classes.rating}>
-                    <p>4.5</p>
+                    <p>{props.currentBeer.rating}</p>
                     <img src={rateStar} />
                 </div>
             </div>
 
             <div className={classes.beerData}>
                 <div className={classes.beerPhotoBlock}>
-                    <img src={cIsForCookieBig}/>
+                    <img src={`http://localhost:3001${props.currentBeer.photo}`}/>
                     <div className={classes.sideSection}>
                         <div className={classes.favourite}>
                             <img src={heart}/>
@@ -38,16 +38,16 @@ const BeerCard = (props) => {
                 </div>
                 <div className={classes.dataList}>
                     <BeerDataItem keyP="Стиль" value="Imperial / Double"/>
-                    <BeerDataItem keyP="Категория" value="Stout"/>
+                    <BeerDataItem keyP="Категория" value={props.currentBeer.category}/>
                     <BeerDataItem keyP="Хмель" value="n/a"/>
                     <BeerDataItem keyP="Пивоварня" value="4BREWERS"/>
                     <BeerDataItem keyP="Страна" value="россия"/>
-                    <BeerDataItem keyP="ABV" value="8.5%"/>
+                    <BeerDataItem keyP="ABV" value={`${props.currentBeer.abv}%`}/>
                 </div>
             </div>
 
             <div className={classes.description}>
-                <p>Плотный, насыщенный крепкий тёмный эль. Сладкий, со вкусом и ароматом шоколада и печенья.</p>
+                <p>{props.currentBeer.description}</p>
             </div>
 
             <div className={classes.reviewHeader}>

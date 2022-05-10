@@ -19,11 +19,11 @@ const BeerItem = (props) => {
                 <img src={heart}/>
             </div>
             <div className={classes.photo}>
-                <NavLink to='/beer'><img src={`http://localhost:3001${props.picture}`} /></NavLink>
+                <NavLink to={`/beer/${props.id}`}><img src={`http://localhost:3001${props.picture}`} /></NavLink>
             </div>
             <div className={classes.bottomPannel}>
                 <div className={classes.beerData}>
-                    <NavLink to='/beer'><p className={classes.name}>{props.name}</p></NavLink>
+                    <NavLink to={`/beer/${props.id}`}><p className={classes.name}>{props.name}</p></NavLink>
                     <p className={classes.abv}>{props.abv} ABV</p>
                 </div>
                 <img src={arrow}/>

@@ -17,3 +17,21 @@ export const HomePageApi = {
     },
 }
 
+export const BeerCardApi = {
+    getCurrentBeer(id) {
+        // debugger;
+        try{
+            // debugger;
+            return axiosInstance.get(`beer/${id}`)
+                .then(response => {
+                    // debugger;
+                    return response.data;
+                });
+        }catch(err) {
+            // debugger;
+            console.log(err);
+        }
+
+    },
+}
+
