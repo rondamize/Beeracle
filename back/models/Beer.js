@@ -18,10 +18,10 @@ const BeerSchema = mongoose.Schema({
         required: true
     },
     abv: {
-        type: String
+        type: Number
     },
     rating: {
-        type: String
+        type: Number
     }
 });
 

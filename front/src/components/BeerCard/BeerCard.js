@@ -3,12 +3,42 @@ import rateStar from "../../assets/images/rateStar.svg"
 import arrow from "../../assets/images/arrow.svg"
 import heart from "../../assets/images/heart.svg"
 import abstractLineBeerPage from "../../assets/images/abstractLineBeerPage.svg"
-import cIsForCookieBig from "../../assets/images/beer/cIsForCookieBig.svg"
 import cIsForCookieSprite from "../../assets/images/beer/cIsForCookieSprite.svg"
 import Comment from "./Comment/Comment";
 import BeerDataItem from "./BeerDataItem/BeerDataItem";
 import ShowMore from "../ShowMore/ShowMore";
+import {Form, Formik, Field, ErrorMessage} from "formik";
+import * as Yup from "yup"
 
+const initialValues = {
+    comment: '',
+}
+
+const onSubmit = values => {
+    console.log(values);
+}
+
+const validationSchema = Yup.object({
+    comment: Yup.string().required('Напишите что-нибудь')
+})
+
+const CommentText = (props) => {
+    return (
+        <Formik initialValues={initialValues}
+                onSubmit={onSubmit}
+                validationSchema={validationSchema}>
+            <Form>
+                <div className={classes.reviewInput}>
+                    <Field name="comment" as="textarea" placeholder="ОЦЕНИТЕ ЭТО ПИВО..."/>
+                    <ErrorMessage name="comment"/>
+                </div>
+                <div>
+                    <button type='submit' className={classes.submitReviewButton}><img src={arrow} /></button>
+                </div>
+            </Form>
+        </Formik>
+    )
+}
 
 const BeerCard = (props) => {
     return(
@@ -70,8 +100,8 @@ const BeerCard = (props) => {
                 </div>
             </div>
             <div className={classes.reviewInputBlock}>
-                <input className={classes.reviewInput} value="НАЧНИТЕ ВВОДИТЬ ТЕКСТ..."/>
-                <img src={arrow} />
+                {/*<input className={classes.reviewInput} value="НАЧНИТЕ ВВОДИТЬ ТЕКСТ..."/>*/}
+                <CommentText />
             </div>
             <div className={classes.commentsSection}>
                 <Comment />

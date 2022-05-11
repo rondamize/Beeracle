@@ -1,27 +1,22 @@
-import cIsForCookie from "../assets/images/beer/cIsForCookie.svg";
-import sabotage from "../assets/images/beer/sabotage.svg";
-import solidBite from "../assets/images/beer/solidBite.svg";
+import {TopPageApi} from "../api/api";
 
-const ADD_POST = 'ADD_POST';
+const SET_TOP_PAGE = 'SET_TOP_PAGE';
 
 let initialState = {
     beerTop: [
-        {id:1, name: 'C Is For Cookie', rating: '4.5', abv: '8.5% ABV', isFavourite: false, picture: cIsForCookie},
-        {id:2, name: 'Sabotage', rating: '4.4', abv: '6.5% ABV', isFavourite: true, picture: sabotage},
-        {id:3, name: 'Solid bite', rating: '4.3', abv: '4% ABV', isFavourite: false, picture: solidBite},
-        {id:3, name: 'Solid bite', rating: '4.3', abv: '4% ABV', isFavourite: false, picture: solidBite},
+        {_id:1, name: 'C Is For Cookie', rating: '4.5', abv: '8.5% ABV', description: "description1" },
+        {_id:2, name: 'Sabotage', rating: '4.4', abv: '6.5% ABV', description: "description2"},
+        {_id:3, name: 'Solid bite', rating: '4.3', abv: '4% ABV', description: "description3"},
     ],
-
 };
 
 //в качестве state передаем profilePage
 const topPageReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_POST: {
+        case SET_TOP_PAGE: {
             return {
                 ...state,
-                posts: [...state.posts, {id: 5, text: state.newPostText, likesCount: 0}],
-                newPostText: ''
+                beerTop: action.beerTop
             };
         }
 
@@ -32,4 +27,13 @@ const topPageReducer = (state = initialState, action) => {
 
 export default topPageReducer;
 
-export const addPostActionCreator = (text) => ({type: ADD_POST, postMessage: text});
+export const setTopPage = (beerTop) => ({type: SET_TOP_PAGE, beerTop: beerTop});
+
+export const getTopBeerThunkCreator = () => {
+    return (dispatch) => {
+        TopPageApi.getTopBeer()
+            .then(data => {
+                dispatch(setTopPage(data));
+            })
+    }
+}

@@ -25,6 +25,9 @@ app.use('/home', homeRoute);
 const beerRoute = require('./routes/beer');
 app.use('/beer', beerRoute);
 
+const topRoute = require('./routes/top');
+app.use('/top', topRoute);
+
 //ROUTES
 app.get('/', (req, res) => {
     res.send("We are on /home");

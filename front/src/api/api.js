@@ -35,3 +35,11 @@ export const BeerCardApi = {
     },
 }
 
+export const TopPageApi = {
+    getTopBeer() {
+        return axiosInstance.get(`top`)
+            .then(response => {
+                return response.data;
+            });
+    },
+}

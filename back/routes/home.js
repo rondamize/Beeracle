@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
         const savedBeer = await beer.save();
         res.json(savedBeer);
     }catch(err) {
-        res.json({message: err});
+        console.log(res.json({message: err}));
     }
 
 });

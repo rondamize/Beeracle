@@ -4,12 +4,14 @@ import {connect} from "react-redux";
 import {compose} from "redux";
 import {withRouter} from "../../hoc/withRouter";
 import {changeLocationActionCreator} from "../../redux/HeaderReducer";
+import {getTopBeerThunkCreator} from "../../redux/topPageReducer";
 
 
 class TopPageContainer extends React.Component {
 
     componentDidMount() {
         this.props.changeLocationActionCreator(this.props.router.location.pathname);
+        this.props.getTopBeerThunkCreator();
         // debugger;
     }
 
@@ -25,6 +27,6 @@ let mapStateToProps = (state) => ({
 })
 
 export default compose(
-    connect(mapStateToProps, {changeLocationActionCreator}),
+    connect(mapStateToProps, {changeLocationActionCreator, getTopBeerThunkCreator}),
     withRouter
 )(TopPageContainer)

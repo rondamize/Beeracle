@@ -1,6 +1,3 @@
-import cIsForCookie from "../assets/images/beer/cIsForCookie.svg";
-import sabotage from "../assets/images/beer/sabotage.svg";
-import solidBite from "../assets/images/beer/solidBite.svg";
 import {HomePageApi} from "../api/api";
 
 const SET_HOME_PAGE = 'SET_HOME_PAGE';

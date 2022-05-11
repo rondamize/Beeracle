@@ -10,6 +10,7 @@ import HeaderContainer from "./components/Header/HeaderContainer";
 import FavouritesPageContainer from "./components/FavouritesPage/FavouritesPageContainer";
 import BeerCard from "./components/BeerCard/BeerCard";
 import BeerCardContainer from "./components/BeerCard/BeerCardContainer";
+import LoginPage from "./components/Login/Login";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                       <Route path="/top" element={<TopPageContainer />} />
                       <Route path="/favourites" element={<FavouritesPageContainer />} />
                       <Route path="/beer/:beerId" element={<BeerCardContainer />} />
+                      <Route path="/login" element={<LoginPage />}/>
                   </Routes>
                   <Footer />
               </div>
