@@ -14,8 +14,9 @@ const initialValues = {
     comment: '',
 }
 
-const onSubmit = values => {
+const onSubmit = (values, onSubmitProps) => {
     console.log(values);
+    onSubmitProps.resetForm();
 }
 
 const validationSchema = Yup.object({
@@ -30,9 +31,9 @@ const CommentText = (props) => {
             <Form>
                 <div className={classes.reviewInput}>
                     <Field name="comment" as="textarea" placeholder="ОЦЕНИТЕ ЭТО ПИВО..."/>
-                    <ErrorMessage name="comment"/>
                 </div>
                 <div>
+                    <ErrorMessage name="comment"/>
                     <button type='submit' className={classes.submitReviewButton}><img src={arrow} /></button>
                 </div>
             </Form>

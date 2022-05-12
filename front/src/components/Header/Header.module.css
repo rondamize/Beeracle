@@ -44,19 +44,32 @@
     float: right;
 }
 
+.iconsBlock a {
+    text-decoration: none;
+}
+
 .iconSpace {
     width: 130px;
     border-right: 1px solid #fff;
     display: flex;
+    flex-direction: column;
 }
 
 .activeIconSpace {
     background-color: #7B61FF;
 }
 
+.userName {
+    display: flex;
+    margin: auto;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 .iconSpace a{
     margin: auto;
     background-color: inherit;
+    text-decoration: none;
 }
 
 .iconSpace a img{

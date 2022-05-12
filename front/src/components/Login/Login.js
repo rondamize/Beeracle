@@ -1,15 +1,14 @@
 import classes from "./Login.module.css";
 import {Formik, Form, Field, ErrorMessage} from "formik";
 import * as Yup from "yup"
+import {connect} from "react-redux";
+import {loginThunkCreator} from "../../redux/authReducer";
+import {Navigate} from "react-router-dom";
 
 const initialValues = {
     email: '',
     password: '',
     rememberMe: false,
-}
-
-const onSubmit = values => {
-    console.log(values);
 }
 
 const validationSchema = Yup.object({
@@ -20,7 +19,7 @@ const validationSchema = Yup.object({
 const LoginForm = (props) => {
     return(
         <Formik initialValues={initialValues}
-                onSubmit={onSubmit}
+                onSubmit={props.onSubmit}
                 validationSchema={validationSchema}>
             <Form>
                 <div>
@@ -28,7 +27,7 @@ const LoginForm = (props) => {
                     <ErrorMessage name='email' />
                 </div>
                 <div>
-                    <Field placeholder={"Password"} id="password" name="password" />
+                    <Field placeholder={"Password"} id="password" name="password" type="password"/>
                     <ErrorMessage name='password' />
                 </div>
                 <div>
@@ -44,13 +43,26 @@ const LoginForm = (props) => {
 }
 
 const LoginPage = (props) => {
+    const onSubmit = (values, onSubmitProps) => {
+        console.log(values);
+        props.loginThunkCreator(values.email, values.password);
+        onSubmitProps.resetForm();
+    }
+    if (props.isAuth) {
+        return <Navigate to={"/home"} />
+    }
    return(
        <div className={classes.content}>
            <h1>Login</h1>
-           <LoginForm />
+           <LoginForm onSubmit={onSubmit}/>
        </div>
    );
 }
-export default LoginPage;
+
+const mapStateToProps = (state) => ({
+    isAuth: state.auth.isAuth
+})
+
+export default connect(mapStateToProps, {loginThunkCreator})(LoginPage);
 
 

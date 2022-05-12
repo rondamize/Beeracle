@@ -43,3 +43,25 @@ export const TopPageApi = {
             });
     },
 }
+
+export const AuthApi = {
+    me() {
+        return axiosInstance.get(`auth/me`)
+            .then(response => {
+                return response.data;
+            });
+    },
+    login(email, password) {
+        return axiosInstance.post(`auth/login`, {email: email, password: password})
+            .then(response => {
+                // debugger;
+                return response.data;
+            });
+    },
+    logout() {
+        return axiosInstance.get(`auth/logout`)
+            .then(response => {
+                return response.data;
+            });
+    }
+}

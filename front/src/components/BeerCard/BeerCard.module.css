@@ -228,6 +228,8 @@
 .submitReviewButton {
     float: right;
     margin: 16px;
+    background: transparent;
+    border: none;
 }
 
 .commentsSection {
