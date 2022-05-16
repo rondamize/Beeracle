@@ -8,7 +8,8 @@ let initialState = {
         name: 'C Is For Cookie',
         rating: '4.5',
         abv: '8.5% ABV',
-        description: "description1"
+        description: "description1",
+        reviews: []
     }
 
 };
@@ -39,7 +40,7 @@ const beerCardReducer = (state = initialState, action) => {
 
 export default beerCardReducer;
 
-export const setBeerCard = (beerData) => ({type: SET_BEER_CARD, beerData: beerData});
+export const setBeerCard = (beerData, comments) => ({type: SET_BEER_CARD, beerData: beerData, comments: comments});
 
 export const getCurrentBeerThunkCreator = (id) => {
     // debugger;
@@ -47,7 +48,8 @@ export const getCurrentBeerThunkCreator = (id) => {
         BeerCardApi.getCurrentBeer(id)
             .then(data => {
                 // debugger;
-                dispatch(setBeerCard(data));
+                dispatch(setBeerCard(data.beer, data.comments));
+                //dispatch set comments
             })
     }
 }
