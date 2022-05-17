@@ -1,47 +1,17 @@
+import React from "react";
 import classes from "./BeerCard.module.css";
 import rateStar from "../../assets/images/rateStar.svg"
-import arrow from "../../assets/images/arrow.svg"
 import heart from "../../assets/images/heart.svg"
 import abstractLineBeerPage from "../../assets/images/abstractLineBeerPage.svg"
 import cIsForCookieSprite from "../../assets/images/beer/cIsForCookieSprite.svg"
 import Comment from "./Comment/Comment";
 import BeerDataItem from "./BeerDataItem/BeerDataItem";
 import ShowMore from "../ShowMore/ShowMore";
-import {Form, Formik, Field, ErrorMessage} from "formik";
-import * as Yup from "yup"
+import ReviewInputContainer from "./ReviewInput/Review";
 
-const initialValues = {
-    comment: '',
-}
-
-const onSubmit = (values, onSubmitProps) => {
-    console.log(values);
-    onSubmitProps.resetForm();
-}
-
-const validationSchema = Yup.object({
-    comment: Yup.string().required('Напишите что-нибудь')
-})
-
-const CommentText = (props) => {
-    return (
-        <Formik initialValues={initialValues}
-                onSubmit={onSubmit}
-                validationSchema={validationSchema}>
-            <Form>
-                <div className={classes.reviewInput}>
-                    <Field name="comment" as="textarea" placeholder="ОЦЕНИТЕ ЭТО ПИВО..."/>
-                </div>
-                <div>
-                    <ErrorMessage name="comment"/>
-                    <button type='submit' className={classes.submitReviewButton}><img src={arrow} /></button>
-                </div>
-            </Form>
-        </Formik>
-    )
-}
 
 const BeerCard = (props) => {
+    let reviews = props.currentBeer.reviews.map(r => <Comment review={r}/>);
     return(
         <div className={classes.content}>
             <div className={classes.nameRatingPannel}>
@@ -91,28 +61,11 @@ const BeerCard = (props) => {
                 <p>Написать отзыв</p>
             </div>
 
-            <div className={classes.rateStars}>
-                <div className={classes.rateStarsContainer}>
-                    <img className={classes.rateStar} src={rateStar} />
-                    <img className={classes.rateStar} src={rateStar} />
-                    <img className={classes.rateStar} src={rateStar} />
-                    <img className={classes.rateStar} src={rateStar} />
-                    <img className={classes.rateStar} src={rateStar} />
-                </div>
-            </div>
             <div className={classes.reviewInputBlock}>
-                {/*<input className={classes.reviewInput} value="НАЧНИТЕ ВВОДИТЬ ТЕКСТ..."/>*/}
-                <CommentText />
+                <ReviewInputContainer />
             </div>
             <div className={classes.commentsSection}>
-                <Comment />
-                <Comment />
-                <Comment />
-                <Comment />
-                <Comment />
-                <Comment />
-                <Comment />
-                <Comment />
+                {reviews}
             </div>
             <ShowMore />
         </div>

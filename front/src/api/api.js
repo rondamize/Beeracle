@@ -28,11 +28,32 @@ export const BeerCardApi = {
                     return response.data;
                 });
         }catch(err) {
-            // debugger;
             console.log(err);
         }
-
     },
+    getComments(beerId) {
+        try{
+            return axiosInstance.get(`beer/${beerId}/reviews`)
+                .then(response => {
+                    console.log("Got comments from db: ", Date.now().toLocaleString())
+                    return response.data;
+                });
+        }catch(err) {
+            console.log(err);
+        }
+    },
+    submitReview(beerID, userID, rating, text) {
+        try{
+            return axiosInstance.post(`beer/${beerID}/reviews`,
+                {beer: beerID, user: userID, rating: rating, text: text})
+                .then(response => {
+                    console.log("Saved to db: ", Date.now().toLocaleString())
+                    return response.data;
+                });
+        }catch(err) {
+            console.log(err);
+        }
+    }
 }
 
 export const TopPageApi = {

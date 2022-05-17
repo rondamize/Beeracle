@@ -9,6 +9,7 @@ import {getCurrentBeerThunkCreator} from "../../redux/BeerCardReducer";
 class BeerCardContainer extends React.Component {
 
     componentDidMount() {
+        // alert("did mount")
         let id = this.props.router.params.beerId;
         // debugger;
         // if (!id) {

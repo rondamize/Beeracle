@@ -9,11 +9,12 @@ const User = require('../models/User');
 router.get('/:beerID', async (req, res) => {
     try {
         const beer = await Beer.findById(req.params.beerID);
-        const reviews = await Review.find({beer: req.params.beerID, text: {$exists:true}});
+        const reviews = await Review.find({beer: req.params.beerID, text: {$exists:true, $gt:""}});
         // console.log(reviews);
         res.json({beer, reviews: reviews});
-        // console.log(beer);
+        console.log(beer);
     }catch(err) {
+        console.log(err);
         res.json({message: err});
     }
 });
@@ -21,7 +22,7 @@ router.get('/:beerID', async (req, res) => {
 //GET ALL COMMENTS TO A SPECIFIC BEER
 router.get('/:beerID/reviews', async (req, res) => {
     try {
-        const reviews = await Review.find({beer: req.params.beerID});
+        const reviews = await Review.find({beer: req.params.beerID, text: {$exists:true, $gt:""}});
         res.json(reviews);
         console.log(reviews);
     }catch(err) {
@@ -32,7 +33,7 @@ router.get('/:beerID/reviews', async (req, res) => {
 //SUBMIT A REVIEW
 router.post('/:beerID/reviews', async (req, res) => {
     const userName = await User.findById(req.body.user, {userName: 1});
-    // console.log(userName)
+    console.log(userName)
     const review = new Review({
         beer: req.body.beer,
         user: req.body.user,
@@ -42,6 +43,7 @@ router.post('/:beerID/reviews', async (req, res) => {
     });
     try {
         const savedReview = await review.save();
+        console.log("HELLO there", Date.now())
         res.json(savedReview);
     }catch(err) {
         console.log(res.json({message: err}));

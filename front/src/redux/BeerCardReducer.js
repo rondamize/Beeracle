@@ -1,6 +1,7 @@
 import {BeerCardApi} from "../api/api";
 
 const SET_BEER_CARD = 'SET_BEER_CARD';
+const UPDATE_COMMENTS = 'UPDATE_COMMENTS';
 
 let initialState = {
     currentBeer: {
@@ -9,7 +10,7 @@ let initialState = {
         rating: '4.5',
         abv: '8.5% ABV',
         description: "description1",
-        reviews: []
+        reviews: [{userName: null, text: null, likes: 0, dislikes: 0}]
     }
 
 };
@@ -18,6 +19,7 @@ let initialState = {
 const beerCardReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_BEER_CARD: {
+            // debugger;
             return {
                 ...state,
                 currentBeer: {
@@ -28,7 +30,17 @@ const beerCardReducer = (state = initialState, action) => {
                     abv: action.beerData.abv,
                     description: action.beerData.description,
                     category: action.beerData.category,
-                    photo: action.beerData.photo
+                    photo: action.beerData.photo,
+                    reviews: action.reviews
+                }
+            };
+        }
+        case UPDATE_COMMENTS: {
+            return {
+                ...state,
+                currentBeer: {
+                    ...state.currentBeer,
+                    reviews: action.reviews.length > 0 ? action.reviews : [...state.currentBeer.reviews]
                 }
             };
         }
@@ -40,16 +52,34 @@ const beerCardReducer = (state = initialState, action) => {
 
 export default beerCardReducer;
 
-export const setBeerCard = (beerData, comments) => ({type: SET_BEER_CARD, beerData: beerData, comments: comments});
+export const setBeerCard = (beerData, reviews) => ({type: SET_BEER_CARD, beerData: beerData, reviews: reviews});
+
+export const updateComments = (reviews) => ({type: UPDATE_COMMENTS, reviews: reviews});
 
 export const getCurrentBeerThunkCreator = (id) => {
-    // debugger;
     return (dispatch) => {
         BeerCardApi.getCurrentBeer(id)
             .then(data => {
-                // debugger;
-                dispatch(setBeerCard(data.beer, data.comments));
-                //dispatch set comments
+                dispatch(setBeerCard(data.beer, data.reviews));
             })
+    }
+}
+
+export const updateCommentsThunkCreator = (beerId) => {
+    return (dispatch) => {
+        BeerCardApi.getComments(beerId)
+            .then(data => {
+                // debugger;
+                dispatch(updateComments(data));
+            })
+    }
+}
+
+export const submitReviewThunkCreator = (beerID, userID, rating, text) => {
+    return (dispatch) => {
+        BeerCardApi.submitReview(beerID, userID, rating, text)
+            .then(() => {
+                BeerCardApi.getComments(beerID)
+                    .then(data => dispatch(updateComments(data)))})
     }
 }

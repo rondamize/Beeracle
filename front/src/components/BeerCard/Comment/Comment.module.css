@@ -38,6 +38,11 @@
     margin-right: 20px;
 }
 
+.rateStarUnchecked {
+    margin-right: 20px;
+    opacity: 0.5;
+}
+
 .commentBody {
     min-height: 154px;
     font-family: 'Mont';

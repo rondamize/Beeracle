@@ -4,30 +4,36 @@ import like from "../../../assets/images/like.svg";
 
 
 const Comment = (props) => {
+    let rateStars = [];
+    for (let i = 0; i < 5; i++) {
+        if (i < props.review.rating) {
+            rateStars.push(<img className={classes.rateStar} src={rateStar} />);
+        } else {
+            rateStars.push(<img className={classes.rateStarUnchecked} src={rateStar} />);
+        }
+
+    }
+
     return(
         <div className={classes.content}>
             <div className={classes.space}></div>
             <div className={classes.commentData}>
                 <div className={classes.commentHeader}>
-                    <p className={classes.username}>@rondamize</p>
+                    <p className={classes.username}>{`@${props.review.userName}`}</p>
                     <div className={classes.rating}>
-                        <img className={classes.rateStar} src={rateStar} />
-                        <img className={classes.rateStar} src={rateStar} />
-                        <img className={classes.rateStar} src={rateStar} />
-                        <img className={classes.rateStar} src={rateStar} />
-                        <img className={classes.rateStar} src={rateStar} />
+                        {rateStars}
                     </div>
                 </div>
                 <div className={classes.commentBody}>
-                    <p className={classes.commentText}>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    <p className={classes.commentText}>{props.review.text}</p>
                     <div className={classes.likesSection}>
                         <div className={classes.likes}>
                             <img src={like} />
-                            <p>10</p>
+                            <p>{props.review.likes}</p>
                         </div>
                         <div className={classes.dislikes}>
                             <img src={like} />
-                            <p>5</p>
+                            <p>{props.review.dislikes}</p>
                         </div>
                     </div>
                 </div>
