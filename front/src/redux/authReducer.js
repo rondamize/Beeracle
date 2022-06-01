@@ -10,11 +10,9 @@ let initialState = {
     isFetching: false
 };
 
-//в качестве state передаем dialogsPage
 const authReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_AUTHORISED_USER_DATA: {
-            // debugger;
             return {
                 ...state,
                 isAuth: action.isAuth,
@@ -28,7 +26,8 @@ const authReducer = (state = initialState, action) => {
 
 export default authReducer;
 
-export const setAuthorisedUserData = (id, userName, email, isAuth) => ({type: SET_AUTHORISED_USER_DATA, authUserData: {id, userName, email, isAuth}});
+export const setAuthorisedUserData = (id, userName, email, isAuth) =>
+    ({type: SET_AUTHORISED_USER_DATA, authUserData: {id, userName, email, isAuth}});
 
 export const authorisationThunkCreator = () => {
     return (dispatch) => {

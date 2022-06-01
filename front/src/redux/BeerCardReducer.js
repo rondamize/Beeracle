@@ -10,6 +10,7 @@ let initialState = {
         rating: '4.5',
         abv: '8.5% ABV',
         description: "description1",
+        brewery: "",
         reviews: [{userName: null, text: null, likes: 0, dislikes: 0}]
     }
 
@@ -29,6 +30,7 @@ const beerCardReducer = (state = initialState, action) => {
                     rating: action.beerData.rating,
                     abv: action.beerData.abv,
                     description: action.beerData.description,
+                    brewery: action.beerData.brewery,
                     category: action.beerData.category,
                     photo: action.beerData.photo,
                     reviews: action.reviews

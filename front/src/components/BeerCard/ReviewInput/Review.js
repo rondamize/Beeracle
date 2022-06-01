@@ -12,22 +12,18 @@ const initialValues = {
     rateStars: 0
 }
 
-// const onSubmit = (values, onSubmitProps) => {
-//     console.log(values);
-//     onSubmitProps.resetForm();
-// }
-
 const validationSchema = Yup.object({
-    comment: Yup.string().required('Напишите что-нибудь'),
+    // comment: Yup.string().required('Напишите что-нибудь'),
+    comment: Yup.string(),
     rateStars: Yup.number().required('Поставьте оценку пиву')
 })
 
 const radioOptions = [
-    {key: 'Rate1', value: '1'},
-    {key: 'Rate2', value: '2'},
+    {key: 'Rate1', value: '5'},
+    {key: 'Rate2', value: '4'},
     {key: 'Rate3', value: '3'},
-    {key: 'Rate4', value: '4'},
-    {key: 'Rate5', value: '5'}
+    {key: 'Rate4', value: '2'},
+    {key: 'Rate5', value: '1'}
 ]
 
 const ReviewInput = (props) => {
@@ -38,7 +34,6 @@ const ReviewInput = (props) => {
                 validationSchema={validationSchema}
                 radioOptions={radioOptions}>
             <Form>
-                {/*rate stars*/}
                 <div className={classes.rateStars}>
                     <div className={classes.rateStarsContainer}>
                         <Field name="rateStars">
@@ -48,8 +43,10 @@ const ReviewInput = (props) => {
                                         return (
                                             <React.Fragment key={option.key}>
                                                 <input type="radio" id={option.value} {...field}
-                                                       value={option.value} checked={field.value === option.value}/>
-                                                <label htmlFor={option.value}><img className={classes.rateStar} src={rateStar} /></label>
+                                                       value={option.value} checked={field.value === option.value}
+                                                        className={classes.rateCheckBox}
+                                                />
+                                                <label htmlFor={option.value} className={classes.rateLabel}></label>
                                             </React.Fragment>
                                         )
                                     })
@@ -58,14 +55,14 @@ const ReviewInput = (props) => {
                         </Field>
                     </div>
                 </div>
-                {/*rate stars*/}
                 <div className={classes.reviewInput}>
                     <Field name="comment" as="textarea" placeholder="ОЦЕНИТЕ ЭТО ПИВО..."/>
                 </div>
-                <div>
+                <div className={classes.submitContainer}>
                     <ErrorMessage name="comment"/>
                     <ErrorMessage name="rateStars"/>
-                    <button type='submit' className={classes.submitReviewButton}><img src={arrow} /></button>
+                    {/*<button type='submit' className={classes.submitReviewButton}><img src={arrow} /></button>*/}
+                    <button type='submit' className={classes.submitReviewButton}></button>
                 </div>
             </Form>
         </Formik>

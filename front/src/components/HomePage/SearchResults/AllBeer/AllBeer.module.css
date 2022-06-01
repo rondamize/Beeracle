@@ -1,6 +1,6 @@
 .content {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    background-color: #ffffff;
-    grid-gap: 1px;
+    grid-template-columns: repeat(3, 300px);
+    /*background-color: #ffffff;*/
+    /*grid-gap: 1px;*/
 }

@@ -32,16 +32,16 @@ const BeerCard = (props) => {
                         <div className={classes.favourite}>
                             <img src={heart}/>
                         </div>
-                        <div className={classes.sprite}>
-                            <img src={cIsForCookieSprite}/>
-                        </div>
+                        {/*<div className={classes.sprite}>*/}
+                        {/*    <img src={cIsForCookieSprite}/>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
                 <div className={classes.dataList}>
                     <BeerDataItem keyP="Стиль" value="Imperial / Double"/>
                     <BeerDataItem keyP="Категория" value={props.currentBeer.category}/>
                     <BeerDataItem keyP="Хмель" value="n/a"/>
-                    <BeerDataItem keyP="Пивоварня" value="4BREWERS"/>
+                    <BeerDataItem keyP="Пивоварня" value={props.currentBeer.brewery}/>
                     <BeerDataItem keyP="Страна" value="россия"/>
                     <BeerDataItem keyP="ABV" value={`${props.currentBeer.abv}%`}/>
                 </div>

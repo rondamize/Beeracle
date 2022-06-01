@@ -13,6 +13,10 @@ const BeerSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    brewery: {
+        type: String,
+        required: true
+    },
     description: {
         type: String,
         required: true

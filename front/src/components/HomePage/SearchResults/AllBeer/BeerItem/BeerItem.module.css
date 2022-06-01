@@ -1,7 +1,7 @@
 .content, .forTop {
     background-color: black;
-    /*border-right: 1px solid #ffffff;*/
-    /*border-bottom: 1px solid #ffffff;*/
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
     height: 300px;
 }
 

@@ -19,7 +19,6 @@ function App() {
               <Frame />
               <div className={classes.content}>
                   <HeaderContainer />
-                  {/*<HomePage />*/}
                   <Routes>
                       <Route path="/home" element={<HomePage />} />
                       <Route path="/top" element={<TopPageContainer />} />

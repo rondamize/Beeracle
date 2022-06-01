@@ -12,7 +12,6 @@ class TopPageContainer extends React.Component {
     componentDidMount() {
         this.props.changeLocationActionCreator(this.props.router.location.pathname);
         this.props.getTopBeerThunkCreator();
-        // debugger;
     }
 
     render() {

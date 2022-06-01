@@ -10,9 +10,9 @@ let initialState = {
     //     {id:4, name: 'Solid bite', rating: '4.3', abv: '4% ABV', isFavourite: false, picture: solidBite},
     // ],
     allBeer: [
-        {_id:1, name: 'C Is For Cookie', rating: '4.5', abv: '8.5% ABV', description: "description1" },
-        {_id:2, name: 'Sabotage', rating: '4.4', abv: '6.5% ABV', description: "description2"},
-        {_id:3, name: 'Solid bite', rating: '4.3', abv: '4% ABV', description: "description3"},
+        {_id:1, name: 'C Is For Cookie', rating: '4.5', abv: '8.5% ABV', description: "description1", brewery: "" },
+        {_id:2, name: 'Sabotage', rating: '4.4', abv: '6.5% ABV', description: "description2", brewery: "" },
+        {_id:3, name: 'Solid bite', rating: '4.3', abv: '4% ABV', description: "description3", brewery: "" },
     ],
 
 };
@@ -42,6 +42,16 @@ export const getAllBeerThunkCreator = () => {
             .then(data => {
                 dispatch(setHomePage(data));
                 // debugger;
+            })
+    }
+}
+
+export const searchBeerThunkCreator = (searchString) => {
+    return (dispatch) => {
+        HomePageApi.searchBeer(searchString)
+            .then(data => {
+                //Потребуется другой action для вывода найденного пива
+                dispatch(setHomePage(data));
             })
     }
 }

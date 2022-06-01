@@ -15,6 +15,12 @@ export const HomePageApi = {
                 return response.data;
             });
     },
+    searchBeer(searchString) {
+        return axiosInstance.get(`home/${searchString}`)
+            .then(response => {
+                return response.data;
+            });
+    }
 }
 
 export const BeerCardApi = {
@@ -75,7 +81,6 @@ export const AuthApi = {
     login(email, password) {
         return axiosInstance.post(`auth/login`, {email: email, password: password})
             .then(response => {
-                // debugger;
                 return response.data;
             });
     },

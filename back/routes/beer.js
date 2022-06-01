@@ -9,7 +9,7 @@ const User = require('../models/User');
 router.get('/:beerID', async (req, res) => {
     try {
         const beer = await Beer.findById(req.params.beerID);
-        const reviews = await Review.find({beer: req.params.beerID, text: {$exists:true, $gt:""}});
+        const reviews = await Review.find({beer: req.params.beerID, text: {$exists:true, $gt:""}}).sort({date:-1});
         // console.log(reviews);
         res.json({beer, reviews: reviews});
         console.log(beer);
@@ -22,7 +22,7 @@ router.get('/:beerID', async (req, res) => {
 //GET ALL COMMENTS TO A SPECIFIC BEER
 router.get('/:beerID/reviews', async (req, res) => {
     try {
-        const reviews = await Review.find({beer: req.params.beerID, text: {$exists:true, $gt:""}});
+        const reviews = await Review.find({beer: req.params.beerID, text: {$exists:true, $gt:""}}).sort({date:-1});
         res.json(reviews);
         console.log(reviews);
     }catch(err) {
@@ -39,6 +39,7 @@ router.post('/:beerID/reviews', async (req, res) => {
         user: req.body.user,
         userName: userName.userName,
         text: req.body.text,
+        date: Date.now(),
         rating: req.body.rating
     });
     try {

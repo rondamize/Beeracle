@@ -13,18 +13,30 @@
 
 }
 
-.searchArea input {
+.form {
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
     padding: 0;
     border: none;
     height: inherit;
-    width: 100%;
+    width: 1050px;
     background: transparent;
     color: #ffffff;
     opacity: 0.7;
-
     font-family: 'Mont';
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
     line-height: 28px;
+    outline: none;
+}
+
+.submitSearchButton {
+    /*float: right;*/
+    /*margin: 16px;*/
+    background: transparent;
+    border: none;
 }

@@ -183,13 +183,23 @@
     margin: auto 40px;
 }
 
-.rateStar {
-    opacity: 0.5;
-    width: 25px;
-    margin-right: 20px;
+.rateCheckBox {
+    opacity: 0;
+    float: right;
 }
 
-.rateStar:hover {
+.rateLabel {
+    content: url('../../assets/images/rateStar.svg');
+    opacity: 0.5;
+    width: 25px;
+    float: right;
+}
+
+
+.rateLabel:hover,
+.rateCheckBox:checked + label,
+.rateCheckBox:checked ~ label,
+.rateLabel:hover ~ label {
     opacity: 1;
 }
 
@@ -204,7 +214,7 @@
     height: 85px;
     background: transparent;
     border: none;
-    color: #ffffff;
+    color: white;
     opacity: 0.7;
     width: 100%;
     font-family: 'Mont';
@@ -222,16 +232,48 @@
     padding: 10px 35px;
     font-family: 'Mont';
     font-style: normal;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: white;
+    background: transparent;
+    resize: none;
+}
+
+.reviewInput textarea::placeholder {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+
+.submitContainer {
+    display: flex;
+    align-items: center;
+    height: 68px;
+    padding: 16px;
 }
 
 .submitReviewButton {
     float: right;
-    margin: 16px;
+    order:999;
+    margin-left: auto;
+    /*margin: 16px;*/
     background: transparent;
     border: none;
+    height: 44px;
+    width: 44px;
+    background-image: url('../../assets/images/arrow.svg');
+}
+
+.submitReviewButton:hover{
+    background-image: url('../../assets/images/arrowHover.svg');
 }
 
 .commentsSection {
-    margin-top: 96px;
+    /*margin-top: 96px;*/
+    margin-top: 82px;
 }
