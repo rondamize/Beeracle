@@ -7,7 +7,9 @@ const SearchResults = (props) => {
         <div className={classes.content}>
             <CategoriesSeparator />
             <AllBeerContainer />
-            <ShowMore />
+            <div className={classes.showMore}>
+                <ShowMore />
+            </div>
         </div>
     );
 }

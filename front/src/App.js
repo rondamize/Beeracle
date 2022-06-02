@@ -19,13 +19,15 @@ function App() {
               <Frame />
               <div className={classes.content}>
                   <HeaderContainer />
-                  <Routes>
-                      <Route path="/home" element={<HomePage />} />
-                      <Route path="/top" element={<TopPageContainer />} />
-                      <Route path="/favourites" element={<FavouritesPageContainer />} />
-                      <Route path="/beer/:beerId" element={<BeerCardContainer />} />
-                      <Route path="/login" element={<LoginPage />}/>
-                  </Routes>
+                  <div className={classes.routeContent}>
+                      <Routes>
+                          <Route path="/home" element={<HomePage />} />
+                          <Route path="/top" element={<TopPageContainer />} />
+                          <Route path="/favourites" element={<FavouritesPageContainer />} />
+                          <Route path="/beer/:beerId" element={<BeerCardContainer />} />
+                          <Route path="/login" element={<LoginPage />}/>
+                      </Routes>
+                  </div>
                   <Footer />
               </div>
               <Frame />

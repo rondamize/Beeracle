@@ -1,4 +1,10 @@
 .content {
     border-left: 1px solid #ffffff;
-    /*height: 600px;*/
+    min-height: 1500px;
+    position: relative;
+}
+.showMore {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }

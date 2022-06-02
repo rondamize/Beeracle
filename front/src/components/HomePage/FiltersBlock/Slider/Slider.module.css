@@ -1,0 +1,6 @@
+.content {
+    display: flex;
+    width: 250px;
+    margin: 22px auto 72px;
+    /*margin-top: 22px;*/
+}

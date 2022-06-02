@@ -6,6 +6,7 @@ import allBeerReducer from "./allBeerReducer";
 import thunkMiddleware from "redux-thunk";
 import beerCardReducer from "./BeerCardReducer";
 import authReducer from "./authReducer";
+import filtersReducer from "./FiltersReducer";
 
 
 let reducers = combineReducers({
@@ -14,7 +15,8 @@ let reducers = combineReducers({
     favouritesPage: favouritesPageReducer,
     allBeer: allBeerReducer,
     beerCard: beerCardReducer,
-    auth: authReducer
+    auth: authReducer,
+    filters: filtersReducer
 });
 
 let store = createStore(reducers, applyMiddleware(thunkMiddleware));
