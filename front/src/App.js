@@ -11,6 +11,7 @@ import FavouritesPageContainer from "./components/FavouritesPage/FavouritesPageC
 import BeerCard from "./components/BeerCard/BeerCard";
 import BeerCardContainer from "./components/BeerCard/BeerCardContainer";
 import LoginPage from "./components/Login/Login";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                           <Route path="/favourites" element={<FavouritesPageContainer />} />
                           <Route path="/beer/:beerId" element={<BeerCardContainer />} />
                           <Route path="/login" element={<LoginPage />}/>
+                          <Route path="/profile" element={<Profile/>}/>
                       </Routes>
                   </div>
                   <Footer />

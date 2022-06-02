@@ -1,0 +1,40 @@
+.content {
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*flex-direction: column;*/
+}
+
+.header {
+    height: 185px;
+    border-bottom: 1px solid #ffffff;
+    position: relative;
+}
+
+.searchName {
+    font-family: 'Mont';
+    font-weight: 700;
+    font-size: 30px;
+    position: absolute;
+    margin-left: 9%;
+    top: 72%;
+    background: transparent;
+    text-transform: uppercase;
+}
+
+.abstractLine {
+    position: absolute;
+    margin-left: 4%;
+    top: 65%;
+}
+
+.shelfStore {
+
+}
+
+.shelf {
+    display: grid;
+    grid-template-columns: repeat(4, calc(100%/4));
+    border-bottom: 1px solid white;
+    height: 300px;
+    /*border-bottom: 1px solid aqua;*/
+}

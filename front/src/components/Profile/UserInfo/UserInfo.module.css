@@ -1,0 +1,107 @@
+.content {
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*flex-direction: column;*/
+}
+
+.profileHeader {
+    height: 280px;
+    border-bottom: 1px solid #ffffff;
+    display: grid;
+    grid-template-columns: 279px auto;
+}
+
+.badge {
+    height: 100%;
+    border-right: 1px solid #ffffff;
+}
+
+.badge img {
+    width: 276px;
+    height: 276px;
+}
+
+.profileInfo {
+    height: 100%;
+}
+
+.options {
+    height: 65px;
+    width: 100%;
+    position: relative;
+}
+
+.buttonsContainer {
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+.button {
+    outline: none;
+    height: 100%;
+    width: 65px;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    background: transparent;
+    color: white;
+}
+
+.userData {
+    height: 136px;
+}
+
+.name {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #ffffff;
+    text-transform: uppercase;
+    /*height: 58px;*/
+    margin: 13px 50px;
+    /*text-align: center;*/
+}
+
+.rang {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #7B61FF;
+    text-transform: uppercase;
+    margin: 32px 50px 10px;
+}
+
+.nextRangInfo {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    opacity: 0.6;
+    margin-left: 50px;
+}
+
+.exitButtonContainer {
+    height: 66px;
+    position: relative;
+}
+
+.exitButton {
+    position: absolute;
+    right: 0;
+    width: 260px;
+    height: 100%;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    text-transform: uppercase;
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+}

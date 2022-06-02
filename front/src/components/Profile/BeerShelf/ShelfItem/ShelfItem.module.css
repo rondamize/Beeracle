@@ -1,0 +1,19 @@
+.content {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+.photo {
+    margin: auto;
+}
