@@ -21,21 +21,23 @@ const LoginForm = (props) => {
         <Formik initialValues={initialValues}
                 onSubmit={props.onSubmit}
                 validationSchema={validationSchema}>
-            <Form>
-                <div>
-                    <Field placeholder={"E-mail"} id="email" name="email"/>
-                    <ErrorMessage name='email' />
+            <Form className={classes.form}>
+                <div className={classes.fieldContainer}>
+                    <Field className={classes.fieldEmail} placeholder={"E-mail"} id="email" name="email" autocomplete="off"/>
+                    <div className={classes.errorMessage}><ErrorMessage name='email' /></div>
                 </div>
-                <div>
-                    <Field placeholder={"Password"} id="password" name="password" type="password"/>
-                    <ErrorMessage name='password' />
+                <div className={classes.fieldContainer}>
+                    <Field className={classes.fieldPassword} placeholder={"Password"} id="password" name="password" type="password" autocomplete="off"/>
+                    <div className={classes.errorMessage}><ErrorMessage className={classes.errorMessage} name='password' /></div>
+                    <div className={classes.forgotPassword}>Забыли пароль?</div>
                 </div>
+
+                {/*<div>*/}
+                {/*    <Field type={"checkbox"} id="rememberMe" name="rememberMe"/>*/}
+                {/*    <label htmlFor="rememberMe">remember me</label>*/}
+                {/*</div>*/}
                 <div>
-                    <Field type={"checkbox"} id="rememberMe" name="rememberMe"/>
-                    <label htmlFor="rememberMe">remember me</label>
-                </div>
-                <div>
-                    <button type="submit">Войти</button>
+                    <button className={classes.enterButton} type="submit">Войти</button>
                 </div>
             </Form>
         </Formik>
@@ -53,7 +55,7 @@ const LoginPage = (props) => {
     }
    return(
        <div className={classes.content}>
-           <h1>Login</h1>
+           <h1 className={classes.loginHeader}>Войти</h1>
            <LoginForm onSubmit={onSubmit}/>
        </div>
    );

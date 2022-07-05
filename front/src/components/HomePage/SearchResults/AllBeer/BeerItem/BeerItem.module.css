@@ -69,3 +69,19 @@
 .beerData a:hover p{
     color: #7B61FF;
 }
+
+.arrow {
+    float: right;
+    order:999;
+    margin-left: auto;
+    /*margin: 16px;*/
+    background: transparent;
+    border: none;
+    height: 44px;
+    width: 44px;
+    background-image: url('../../../../../assets/images/arrow.svg');
+}
+
+.arrow:hover{
+    background-image: url('../../../../../assets/images/arrowHover.svg');
+}

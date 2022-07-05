@@ -27,14 +27,19 @@
     top: 65%;
 }
 
-.shelfStore {
-
+.shelf {
+    box-sizing: border-box;
+    padding: 0 50px;
 }
 
-.shelf {
-    display: grid;
-    grid-template-columns: repeat(4, calc(100%/4));
-    border-bottom: 1px solid white;
-    height: 300px;
-    /*border-bottom: 1px solid aqua;*/
+.shelfStore {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 15px;
+}
+
+.shelfLine {
+    width: 1078px;
+    color: #ffffff;
 }

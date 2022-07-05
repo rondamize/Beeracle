@@ -1,7 +1,11 @@
 .content {
-    margin: auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    height: 100%;
+    width: 258px;
+    margin-top: 32px;
 }
 
 .name {
@@ -14,6 +18,14 @@
     margin-top: 20px;
 }
 
+.name:hover {
+    color: #7B61FF;
+}
+
 .photo {
-    margin: auto;
+    transition: 0.5s;
+}
+
+.photo:hover {
+    transform: scale(1.1);
 }

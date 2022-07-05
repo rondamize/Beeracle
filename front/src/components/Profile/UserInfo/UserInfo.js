@@ -2,6 +2,7 @@ import classes from "./UserInfo.module.css";
 import dots from "../../../assets/images/dots.svg"
 import bell from "../../../assets/images/bell.svg"
 import avatarBeginner from "../../../assets/images/avatarBeginner.svg"
+import {NavLink} from "react-router-dom";
 
 
 const UserInfo = (props) => {
@@ -25,7 +26,7 @@ const UserInfo = (props) => {
                         <p className={classes.nextRangInfo}>До нового ранга осталось 15 отзывов</p>
                     </div>
                     <div className={classes.exitButtonContainer}>
-                        <button className={classes.exitButton}>Выйти</button>
+                        <NavLink to='/home'><button className={classes.exitButton} onClick={() => {props.logout()}}>Выйти</button></NavLink>
                     </div>
                 </div>
             </div>

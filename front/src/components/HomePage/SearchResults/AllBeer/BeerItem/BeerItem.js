@@ -1,12 +1,10 @@
 import classes from './BeerItem.module.css'
 import heart from "../../../../../assets/images/heart.svg"
-import heartIsFavourite from "../../../../../assets/images/heartIsFavourite.svg"
 import rateStar from "../../../../../assets/images/rateStar.svg"
-import arrow from "../../../../../assets/images/arrow.svg"
 import {NavLink} from "react-router-dom";
+import React from "react";
 
 const BeerItem = (props) => {
-    // debugger;
     return(
         <div className={props.forTop ? classes.forTop : classes.content}>
             <div className={classes.topPannel}>
@@ -24,9 +22,10 @@ const BeerItem = (props) => {
             <div className={classes.bottomPannel}>
                 <div className={classes.beerData}>
                     <NavLink to={`/beer/${props.id}`}><p className={classes.name}>{props.name}</p></NavLink>
-                    <p className={classes.abv}>{props.abv} ABV</p>
+                    <p className={classes.abv}>{props.abv}% ABV</p>
                 </div>
-                <img src={arrow}/>
+                {/*<img className={classes.arrow} src={arrow}/>*/}
+                <button className={classes.arrow}></button>
             </div>
         </div>
     );

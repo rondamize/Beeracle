@@ -1,16 +1,18 @@
 import {BeerCardApi} from "../api/api";
-
+import sabotage from "../assets/images/beer/sabotage.svg"
 const SET_BEER_CARD = 'SET_BEER_CARD';
 const UPDATE_COMMENTS = 'UPDATE_COMMENTS';
 
 let initialState = {
     currentBeer: {
         _id: "1",
-        name: 'C Is For Cookie',
-        rating: '4.5',
-        abv: '8.5% ABV',
+        name: 'Sweet Disaster',
+        rating: '3.92',
+        abv: '7.6% ABV',
         description: "description1",
-        brewery: "",
+        brewery: "Sabotage",
+        photo: sabotage,
+        category: "Стаут",
         reviews: [{userName: null, text: null, likes: 0, dislikes: 0}]
     }
 

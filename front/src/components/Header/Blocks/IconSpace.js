@@ -7,8 +7,10 @@ const IconSpace = (props) => {
     return(
             <div className={props.active ? classNames(classes.iconSpace, classes.activeIconSpace) : classes.iconSpace}>
                 <NavLink to={props.path}><img src={props.active ? props.urlActive : props.url} /></NavLink>
+                {/*{props.userName ? <div className={classes.userName}>{props.userName}*/}
+                {/*    <NavLink to="/home"><button onClick={() => {props.logout()}}>Выход</button></NavLink></div> : null}*/}
                 {props.userName ? <div className={classes.userName}>{props.userName}
-                    <NavLink to="/home"><button onClick={() => {props.logout()}}>Выход</button></NavLink></div> : null}
+                    <NavLink to="/home"></NavLink></div> : null}
             </div>
     );
 }

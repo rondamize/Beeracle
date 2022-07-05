@@ -10,8 +10,8 @@ const TopPage = (props) => {
                 <img className={classes.abstractLine} src={abstractLine}/>
                 <div className={classes.searchName}>Топ недели</div>
             </div>
-            <Top beerTop={props.beerTop}/>
-            <ShowMore />
+            <div className={classes.top}><Top beerTop={props.beerTop}/></div>
+            <div classname={classes.showMore}><ShowMore /></div>
        </div>
    );
 }

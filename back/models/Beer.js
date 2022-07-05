@@ -26,7 +26,11 @@ const BeerSchema = mongoose.Schema({
     },
     rating: {
         type: Number
-    }
+    },
+    date: {
+        type: Date,
+        // default: Date.now()
+    },
 });
 
 module.exports = mongoose.model('Beer', BeerSchema);

@@ -5,8 +5,8 @@ const ShelfItem = (props) => {
 
     return(
         <div className={classes.content}>
-            <img className={classes.photo} src={beer}/>
-            <p className={classes.name}>Sweet disaster</p>
+            <img className={classes.photo} src={props.img}/>
+            <p className={classes.name}>{props.name}</p>
         </div>
     );
 }

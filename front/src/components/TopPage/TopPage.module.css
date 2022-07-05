@@ -2,6 +2,8 @@
     /*display: flex;*/
     /*flex-wrap: wrap;*/
     /*flex-direction: column;*/
+    height: inherit;
+    position: relative;
 }
 
 
@@ -26,4 +28,13 @@
     position: absolute;
     margin-left: 4%;
     top: 65%;
+}
+
+.showMore {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.top {
 }

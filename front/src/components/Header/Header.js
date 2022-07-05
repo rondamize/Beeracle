@@ -13,11 +13,15 @@ import {NavLink} from "react-router-dom";
 const Header = (props) => {
     return(
         <div className={classes.header}>
-            <Logo />
+            <div className={classes.logoContainer}><Logo /></div>
             <div className={classes.space}></div>
             <div className={classes.iconsBlock}>
                 {/*<NavLink to='/top'><IconSpace url={star} urlActive={starActive} path={'/top'} active={props.location === '/top'}/></NavLink>*/}
-                <NavLink to='/favourites'><IconSpace url={heart} urlActive={heartActive} path={'/favourites'} active={props.location === '/favourites'}/></NavLink>
+                {props.isAuth ?
+                    <NavLink to='/favourites'><IconSpace url={heart} urlActive={heartActive} path={'/favourites'} active={props.location === '/favourites'}/></NavLink>
+                    :
+                    null}
+                    {/*// <div className={classes.plug}></div>}*/}
                 <NavLink to='/top'><IconSpace url={star} urlActive={starActive} path={'/top'} active={props.location === '/top'}/></NavLink>
 
                 {props.isAuth ?

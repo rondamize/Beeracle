@@ -5,7 +5,7 @@ const Beer = require('../models/Beer');
 //GET ALL BEER
 router.get('/', async (req, res) => {
     try {
-        const allBeer = await Beer.find();
+        const allBeer = await Beer.find().sort({date:-1});
         res.json(allBeer);
     }catch(err) {
         res.json({message: err});
@@ -23,9 +23,9 @@ router.post('/', async (req, res) => {
         description: req.body.description,
         brewery: req.body.brewery,
         abv: req.body.abv ,
-        rating: req.body.rating
+        rating: req.body.rating,
+        date: Date.now(),
     });
-
     try {
         const savedBeer = await beer.save();
         res.json(savedBeer);

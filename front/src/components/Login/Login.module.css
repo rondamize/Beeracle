@@ -2,4 +2,110 @@
     /*display: flex;*/
     /*flex-wrap: wrap;*/
     /*flex-direction: column;*/
+    width: 100%;
+    height: 600px;
+}
+
+.loginHeader {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin: 40px auto 30px;
+    width: fit-content;
+}
+
+.form {
+    /*width: 100%;*/
+    /*height: 600px;*/
+    display: flex;
+    flex-direction: column;
+    /*margin: auto;*/
+    align-items: center;
+}
+
+.fieldContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.fieldEmail {
+    width: 430px;
+    height: 64px;
+    border: 1px solid #FFFFFF;
+    outline: none;
+    background: transparent;
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #ffffff;
+    padding: 10px 18px;
+}
+
+.fieldPassword {
+    width: 430px;
+    height: 64px;
+    border: 1px solid #FFFFFF;
+    outline: none;
+    background: transparent;
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    /*line-height: 26px;*/
+    color: #ffffff;
+    padding: 10px 18px;
+}
+
+.fieldEmail::placeholder, .fieldPassword::placeholder {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.errorMessage {
+    margin-top: 5px;
+    color: #cdc3ff;
+}
+
+.enterButton {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    height: 64px;
+    width: 250px;
+}
+
+.forgotPassword {
+    margin-top: 16px;
+    /*text-align: center;*/
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.forgotPassword:hover {
+    color: #7B61FF;
+}
+
+.enterButton:hover {
+    color: #7B61FF;
+    font-weight: bolder;
+    border: 2px solid #7B61FF;
 }

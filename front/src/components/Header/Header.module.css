@@ -17,25 +17,26 @@
 }
 
 
-.logo {
+.logoContainer {
     width: 278px;
     border-right: 1px solid #fff;
     font-size: 36px;
     display: flex;
 }
 
-.logo a {
+.logoContainer a {
     margin: auto;
 }
 
-.logo a h1{
+.logoContainer a h1{
     font-size: 36px;
     font-family: Mont;
-    /*margin: auto;*/
 }
 
 .space {
-    width: 510px;
+    width: -webkit-fill-available;
+    min-width: 510px;
+    display: flex;
     border-right: 1px solid #fff;
 }
 
@@ -77,6 +78,11 @@
     fill: white;
 }
 
-.iconSpace:last-child {
+a:last-child .iconSpace{
     border-right: none;
 }
+
+/*.plug {*/
+/*    width: 130px;*/
+/*    border-right: 1px solid #fff;*/
+/*}*/

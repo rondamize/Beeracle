@@ -93,6 +93,51 @@ let initialState = {
             ],
             sliderOptions: null,
         },
+        {
+            id: 4,
+            name: "Пивоварня",
+            open: false,
+            type: "list",
+            listItems: [
+                {
+                    id: 1,
+                    name: "4Brewers",
+                    checked: false
+                },
+                {
+                    id: 2,
+                    name: "Sabotage",
+                    checked: false
+                },
+            ],
+            sliderOptions: null,
+        },
+        {
+            id: 5,
+            name: "Крепость",
+            open: false,
+            type: "slider",
+            listItems: null,
+            sliderOptions: {
+                min: 0,
+                max: 11,
+                currentMin: 0,
+                currentMax: 11
+            }
+        },
+        {
+            id: 6,
+            name: "Плотность",
+            open: false,
+            type: "slider",
+            listItems: null,
+            sliderOptions: {
+                min: 0,
+                max: 90,
+                currentMin: 0,
+                currentMax: 90
+            }
+        },
     ]
 
 };

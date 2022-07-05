@@ -4,10 +4,9 @@ import BeerShelf from "./BeerShelf/BeerShelf";
 
 
 const Profile = (props) => {
-
     return(
         <div className={classes.content}>
-            <UserInfo />
+            <UserInfo logout={props.logoutThunkCreator}/>
             <BeerShelf />
         </div>
     );
