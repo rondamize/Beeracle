@@ -7,7 +7,7 @@ const Profile = (props) => {
     return(
         <div className={classes.content}>
             <UserInfo logout={props.logoutThunkCreator}/>
-            <BeerShelf />
+            <BeerShelf beerShelf={props.beerShelf}/>
         </div>
     );
 }

@@ -31,7 +31,7 @@ router.post('/login',async (req,res) => {
         session.userid=user._id;
         session.username = user.userName;
         // console.log(req.session)
-        console.log(req)
+        // console.log(req)
         // res.redirect('/home');
         res.json({"data": user, resultCode: 0});
         // res.send(`Hey ${user.userName}, welcome!`);

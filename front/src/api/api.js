@@ -91,3 +91,12 @@ export const AuthApi = {
             });
     }
 }
+
+export const ProfileApi = {
+    getBeerShelf() {
+        return axiosInstance.get(`profile/shelf`)
+            .then(response => {
+                return response.data[0];
+            });
+    },
+}

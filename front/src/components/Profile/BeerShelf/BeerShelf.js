@@ -1,14 +1,27 @@
 import classes from "./BeerShelf.module.css";
 import abstractLine from "../../../assets/images/abstractLine.svg";
 import ShelfItem from "./ShelfItem/ShelfItem";
-import beer1 from "../../../assets/images/beer/sabotage.svg";
-import beer2 from "../../../assets/images/beer/cIsForCookie.svg";
-import beer3 from "../../../assets/images/beer/Empatia.svg";
-import beer4 from "../../../assets/images/beer/ridersOnTheStorm.svg";
-import beer5 from "../../../assets/images/beer/vbros.svg";
-import beer6 from "../../../assets/images/beer/nobodyDipa.svg";
 
 const BeerShelf = (props) => {
+
+    let beerItems = props.beerShelf.map(b => <ShelfItem img={b.photo} name={b.beerName}/>);
+
+    let createShelf = (beerItems) => {
+        let beerShelf = [];
+        for (let i = 0; i < beerItems.length; i++) {
+            if (i%4 === 0 && i !== 0) {
+                beerShelf.push(<hr className={classes.shelfLine}/>)
+            }
+
+            beerShelf.push(beerItems[i]);
+
+            if (i === beerItems.length - 1) {
+                beerShelf.push(<hr className={classes.shelfLine}/>)
+            }
+        }
+
+        return beerShelf;
+    }
 
     return(
         <div className={classes.content}>
@@ -18,14 +31,9 @@ const BeerShelf = (props) => {
             </div>
             <div className={classes.shelf}>
                 <div className={classes.shelfStore}>
-                    <ShelfItem img={beer1} name="Sweet disaster"/>
-                    <ShelfItem img={beer2} name="C is for cookie"/>
-                    <ShelfItem img={beer3} name="Эмпатия"/>
-                    <ShelfItem img={beer4} name="Riders on the storm"/>
-                    <hr className={classes.shelfLine}/>
-                    <ShelfItem img={beer5} name="Вброс [Citra]"/>
-                    <ShelfItem img={beer6} name="Nobody dipa"/>
-                    <hr className={classes.shelfLine}/>
+                    {createShelf(beerItems)}
+                    {/*{beerShelf}*/}
+                    {/*<hr className={classes.shelfLine}/>*/}
                 </div>
             </div>
         </div>

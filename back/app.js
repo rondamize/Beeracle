@@ -49,6 +49,9 @@ app.use('/auth', authRoute);
 // const registrationRoute = require('./routes/registration');
 // app.use('/registration', registrationRoute);
 
+const profileRoute = require('./routes/profile');
+app.use('/profile', profileRoute);
+
 //ROUTES
 app.get('/', (req, res) => {
     res.send("We are on /home");

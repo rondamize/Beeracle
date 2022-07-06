@@ -12,7 +12,6 @@ const BeerItem = (props) => {
                     <p className={classes.rateNumber}>{props.rating}</p>
                     <img src={rateStar}/>
                 </div>
-                {/*<img src={props.isFavourite ? heartIsFavourite : heart}/>*/}
                 {/*TODO: Change icon depending on authorised user*/}
                 <img src={heart}/>
             </div>
@@ -24,7 +23,6 @@ const BeerItem = (props) => {
                     <NavLink to={`/beer/${props.id}`}><p className={classes.name}>{props.name}</p></NavLink>
                     <p className={classes.abv}>{props.abv}% ABV</p>
                 </div>
-                {/*<img className={classes.arrow} src={arrow}/>*/}
                 <button className={classes.arrow}></button>
             </div>
         </div>

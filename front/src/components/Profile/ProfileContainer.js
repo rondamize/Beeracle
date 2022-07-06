@@ -3,12 +3,13 @@ import {connect} from "react-redux";
 import {compose} from "redux";
 import {authorisationThunkCreator, logoutThunkCreator} from "../../redux/authReducer";
 import Profile from "./Profile";
+import {getBeerShelfThunkCreator} from "../../redux/profileReducer";
 
 
-class HeaderContainer extends React.Component {
-    // componentDidMount() {
-    //    this.props.authorisationThunkCreator();
-    // }
+class ProfileContainer extends React.Component {
+    componentDidMount() {
+       this.props.getBeerShelfThunkCreator();
+    }
 
     render() {
         return (
@@ -20,9 +21,10 @@ class HeaderContainer extends React.Component {
 let mapStateToProps = (state) => ({
     location: state.header.location,
     userName: state.auth.userName,
-    isAuth: state.auth.isAuth
+    isAuth: state.auth.isAuth,
+    beerShelf: state.profile.beerShelf
 })
 
 export default compose(
-    connect(mapStateToProps, {logoutThunkCreator})
-)(HeaderContainer)
+    connect(mapStateToProps, {logoutThunkCreator, getBeerShelfThunkCreator})
+)(ProfileContainer)
